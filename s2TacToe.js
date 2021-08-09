@@ -53,7 +53,7 @@ function handleSquareClick(e) {
   gameState[index] = players.indexOf(currentPlayer);
   init();
   if (checkForWinner()) {
-    if(!alert(`${currentPlayer.name} won!`)){window.location.reload();}
+    handleWin();
     return;
   }
   toggleCurrentPlayer();
@@ -79,6 +79,10 @@ function checkForWinner() {
   return roundWon;
 }
 
+function handleWin() {
+    infoDisplay.innerText = `${currentPlayer.name} Won!`;
+}
+
 function init() {
   if (!players[0].name || !players[1].name) {
     return;
@@ -94,13 +98,15 @@ function init() {
 /// EVENTS ///
 
 player1Select.addEventListener("change", () => {
-    players[0].name = player1Select.value;
-    init();
-  });
-  
-  player2Select.addEventListener("change", () => {
-    players[1].name = player2Select.value;
-    init();
-  });
-  
-  // restartBtn.addEventListener("click", location.reload);
+  players[0].name = player1Select.value;
+  init();
+});
+
+player2Select.addEventListener("change", () => {
+  players[1].name = player2Select.value;
+  init();
+});
+
+restartBtn.addEventListener("click", () => {
+    window.location.reload();
+})
