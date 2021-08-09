@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="s2TacToe.js" defer></script>
+    <title>s2-Tac-Toe - Play as your favorite Empower 2 instructor!</title>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>s2-Tac-Toe</h1>
+            <p>Play as your favorite Empower 2 instructor!</p>
+            <form id="choosePlayer">
+                <div class="form-group">
+                    <label for="player1">Player 1:</label>
+                    <select name="player1" id="player1">
+                        <option disabled selected value>Select Player</option>
+                        <option value="Ali">Ali</option>
+                        <option value="Blake">Blake</option>
+                        <option value="Kelly">Kelly</option>
+                        <option value="Kirstie">Kirstie</option>
+                        <option value="Melissa">Melissa</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="player2">Player 2:</label>
+                    <select name="player2" id="player2">
+                        <option disabled selected value>Select Player</option>
+                        <option value="Ali">Ali</option>
+                        <option value="Blake">Blake</option>
+                        <option value="Kelly">Kelly</option>
+                        <option value="Kirstie">Kirstie</option>
+                        <option value="Melissa">Melissa</option>
+                        <!-- <option value="Computer">Computer</option> -->
+                    </select>
+                </div>
+            </form>
+        </header>
+        <main>
+            <div class="game-board">
+                <div data-square-index="0" class="square">
+                    <img src="img/blank.png" alt="" class="player-img">
+                </div>
+                <div data-square-index="1" class="square">
+                    <img src="img/blank.png" alt="" class="player-img">
+                </div>
+                <div data-square-index="2" class="square">
+                    <img src="img/blank.png" alt="" class="player-img">
+                </div>
+                <div data-square-index="3" class="square middle-row-square">
+                    <img src="img/blank.png" alt="" class="player-img">
+                </div>
+                <div data-square-index="4" class="square middle-row-square">
+                    <img src="img/blank.png" alt="" class="player-img">
+                </div>
+                <div data-square-index="5" class="square middle-row-square">
+                    <img src="img/blank.png" alt="" class="player-img">
+                </div>
+                <div data-square-index="6" class="square">
+                    <img src="img/blank.png" alt="" class="player-img">
+                </div>
+                <div data-square-index="7" class="square">
+                    <img src="img/blank.png" alt="" class="player-img">
+                </div>
+                <div data-square-index="8" class="square">
+                    <img src="img/blank.png" alt="" class="player-img">
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div>
+                <div id="infoDisplay">Choose your players to start game.</div>
+                <!-- <button id="restart">Restart</button> -->
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
